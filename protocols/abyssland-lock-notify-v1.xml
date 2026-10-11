@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<protocol name="hyprland_lock_notify_v1">
+<protocol name="abyssland_lock_notify_v1">
   <copyright>
     Copyright © 2025 Maximilian Seidler
     All rights reserved.
@@ -30,7 +30,7 @@
     OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
   </copyright>
 
-  <interface name="hyprland_lock_notifier_v1" version="1">
+  <interface name="abyssland_lock_notifier_v1" version="1">
     <description summary="lock notification manager">
       This interface allows clients to monitor whether the wayland session is
       locked or unlocked.
@@ -50,11 +50,11 @@
         If the session is already locked when calling this method,
         the locked event shall be sent immediately.
       </description>
-      <arg name="id" type="new_id" interface="hyprland_lock_notification_v1"/>
+      <arg name="id" type="new_id" interface="abyssland_lock_notification_v1"/>
     </request>
   </interface>
 
-  <interface name="hyprland_lock_notification_v1" version="1">
+  <interface name="abyssland_lock_notification_v1" version="1">
     <description summary="lock notification">
       This interface is used by the compositor to send lock notification events
       to clients.

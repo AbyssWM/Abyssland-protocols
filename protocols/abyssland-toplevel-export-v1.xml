@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<protocol name="hyprland_toplevel_export_v1">
+<protocol name="abyssland_toplevel_export_v1">
   <copyright>
     Copyright © 2022 Vaxry
     All rights reserved.
@@ -37,7 +37,7 @@
     Particularly useful for sharing a single window.
   </description>
 
-  <interface name="hyprland_toplevel_export_manager_v1" version="2">
+  <interface name="abyssland_toplevel_export_manager_v1" version="2">
     <description summary="manager to inform clients and begin capturing">
       This object is a manager which offers requests to start capturing from a
       source.
@@ -53,10 +53,10 @@
         It will contain all the subsurfaces and popups, however the latter will be clipped
         to the geometry of the base surface.
 
-        The handle parameter refers to the address of the window as seen in `hyprctl clients`.
+        The handle parameter refers to the address of the window as seen in `abyssctl clients`.
         For example, for d161e7b0 it would be 3512854448.
       </description>
-      <arg name="frame" type="new_id" interface="hyprland_toplevel_export_frame_v1"/>
+      <arg name="frame" type="new_id" interface="abyssland_toplevel_export_frame_v1"/>
       <arg name="overlay_cursor" type="int"
         summary="composite cursor onto the frame"/>
       <arg name="handle" type="uint" summary="the handle of the toplevel (window) to be captured"/>
@@ -74,7 +74,7 @@
       <description summary="capture a toplevel">
         Same as capture_toplevel, but with a zwlr_foreign_toplevel_handle_v1 handle.
       </description>
-      <arg name="frame" type="new_id" interface="hyprland_toplevel_export_frame_v1"/>
+      <arg name="frame" type="new_id" interface="abyssland_toplevel_export_frame_v1"/>
       <arg name="overlay_cursor" type="int"
         summary="composite cursor onto the frame"/>
       <arg name="handle" type="object" interface="zwlr_foreign_toplevel_handle_v1" allow-null="false" summary="the zwlr_foreign_toplevel_handle_v1 handle of the toplevel to be captured"/>
@@ -82,7 +82,7 @@
     <!-- End Version 2 -->
   </interface>
 
-  <interface name="hyprland_toplevel_export_frame_v1" version="2">
+  <interface name="abyssland_toplevel_export_frame_v1" version="2">
     <description summary="a frame ready for copy">
       This object represents a single frame.
 
@@ -116,8 +116,8 @@
     <request name="copy">
       <description summary="copy the frame">
         Copy the frame to the supplied buffer. The buffer must have the
-        correct size, see hyprland_toplevel_export_frame_v1.buffer and
-        hyprland_toplevel_export_frame_v1.linux_dmabuf. The buffer needs to have a
+        correct size, see abyssland_toplevel_export_frame_v1.buffer and
+        abyssland_toplevel_export_frame_v1.linux_dmabuf. The buffer needs to have a
         supported format.
 
         If the frame is successfully copied, a "flags" and a "ready" event is

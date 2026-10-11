@@ -1,0 +1,7 @@
+prefix=@prefix@
+datarootdir=@datarootdir@
+pkgdatadir=${pc_sysrootdir}${datarootdir}/@PACKAGE@
+
+Name: Abyssland Protocols
+Description: Abyssland protocol files
+Version: @ABYSSLAND_PROTOCOLS_VERSION@

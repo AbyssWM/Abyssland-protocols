@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<protocol name="hyprland_input_capture_v1">
+<protocol name="abyssland_input_capture_v1">
   <copyright>
     Copyright © 2025 Fl0w
 
@@ -35,7 +35,7 @@
 	This protocol is a bridge of the XDG input capture to the compositor.
   </description>
 
-  <interface name="hyprland_input_capture_manager_v1" version="1">
+  <interface name="abyssland_input_capture_manager_v1" version="1">
     <description summary="manage input capture sessions">
       This interface allows to create an input capture session.
     </description>
@@ -45,12 +45,12 @@
         Create a input capture session.
       </description>
 
-      <arg name="session" type="new_id" interface="hyprland_input_capture_v1"/>
+      <arg name="session" type="new_id" interface="abyssland_input_capture_v1"/>
       <arg name="handle" type="string"/>
     </request>
   </interface>
 
- <interface name="hyprland_input_capture_v1" version="1">
+ <interface name="abyssland_input_capture_v1" version="1">
     <description summary="close reproduction of the xdg input capture portal">
 	  Interface that is used to create barrier, and trigger capture and release of the pointer.
 	  The inputs are sent through an EIS socket, when the cursor hit a barrier.

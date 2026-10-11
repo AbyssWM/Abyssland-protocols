@@ -1,38 +1,52 @@
-# hyprland-protocols
-Wayland protocol extensions for Hyprland.
+<div align="center">
 
-This repository exists in an effort to bridge the gap between Hyprland and KDE/Gnome's functionality,
-as well as allow apps for some extra neat functionality under Hyprland.
+<img src="https://github.com/AbyssWM.png?size=200" width="160" alt="Abyss logo">
 
-Since `wayland-protocols` is slow to change (on top of Hyprland not being allowed to contribute), we have to maintain
-a set of protocols Hyprland uses to plumb some things / add some useful features.
+# Abyssland-protocols
 
-Some of the protocols here also do not belong in w-p, as they are specific to Hyprland.
+**Wayland protocol extensions for Abyssland.**
 
-## Finished protocols
-- `hyprland_toplevel_export` -> for exporting toplevel buffers (aka. windows) for screensharing
-- `hyprland_global_keybindings` -> for managing global keybinds via D-Bus.
-- `hyprland_focus_grab` -> for grabbing input focus, primarily for complex context menus.
-- `hyprland_ctm_control` -> for managing CTMs of displays. See [hyprsunset](https://github.com/hyprwm/hyprsunset)
-- `hyprland_surface` -> for setting hyprland specific wl_surface properties.
-- `hyprland_lock_notify` -> for notifying a client about the screen being locked and unlocked.
-- `hyprland_toplevel_mapping` -> for mapping toplevels to hyprland IDs.
-- `hyprland_input_capture` -> for EIS input capture.
+Part of [**Abyss**](https://github.com/AbyssWM) · Based on [hyprland-protocols](https://github.com/hyprwm/hyprland-protocols) by [hyprwm](https://github.com/hyprwm)
 
-## Building
-```sh
-git clone https://github.com/hyprwm/hyprland-protocols                                                   
-cd hyprland-protocols
-meson setup build
-sudo meson install -C build
-```
+</div>
 
-## Contributing
-Adding new protocols is *discouraged*, as most things you think of can already be done one way or another.
-However, if the protocol has a good reason to be, and you have an impl ready, feel free to make a PR.
-We're always up for a discussion to improve things!
+---
 
-Fixing typos / adding explanations to existing protocols - welcome.
+> [!WARNING]
+> **Early development.** Abyss is being rebranded and reworked right now. Nothing is ready for daily use yet.
 
-Adding functionality to protocols / new revisions - welcome, if accompanied with a reason and an impl.
+## About
 
+Abyssland-protocols defines the Abyss-specific Wayland protocols (global shortcuts, toplevel export, focus grab, ...).
+
+Abyssland-protocols is a fork of [hyprland-protocols](https://github.com/hyprwm/hyprland-protocols). Every Abyss library and tool is forked and renamed, so the whole ecosystem builds and updates as one – independent of system packages.
+
+## The Abyss ecosystem
+
+| Repository | Based on |
+|---|---|
+| [Abyssland](https://github.com/AbyssWM/Abyssland) | [Hyprland](https://github.com/hyprwm/Hyprland) |
+| [Abyssal](https://github.com/AbyssWM/Abyssal) | [aquamarine](https://github.com/hyprwm/aquamarine) |
+| [Abyssutils](https://github.com/AbyssWM/Abyssutils) | [hyprutils](https://github.com/hyprwm/hyprutils) |
+| [Abyssparse](https://github.com/AbyssWM/Abyssparse) | [hyprlang](https://github.com/hyprwm/hyprlang) |
+| [Abysscursor](https://github.com/AbyssWM/Abysscursor) | [hyprcursor](https://github.com/hyprwm/hyprcursor) |
+| [Abyssgraphics](https://github.com/AbyssWM/Abyssgraphics) | [hyprgraphics](https://github.com/hyprwm/hyprgraphics) |
+| [Abysswire](https://github.com/AbyssWM/Abysswire) | [hyprwire](https://github.com/hyprwm/hyprwire) |
+| [Abyss-scanner](https://github.com/AbyssWM/Abyss-scanner) | [hyprwayland-scanner](https://github.com/hyprwm/hyprwayland-scanner) |
+| **Abyssland-protocols** | [hyprland-protocols](https://github.com/hyprwm/hyprland-protocols) |
+| [Xdg-desktop-portal-abyss](https://github.com/AbyssWM/Xdg-desktop-portal-abyss) | [xdg-desktop-portal-hyprland](https://github.com/hyprwm/xdg-desktop-portal-hyprland) |
+
+## Credits
+
+Abyssland-protocols exists thanks to **[hyprland-protocols](https://github.com/hyprwm/hyprland-protocols)**, created by **Hypr Development** at **[hyprwm](https://github.com/hyprwm)**. All credit for the original work goes to them – please support the original project.
+
+Abyss is an independent project and is **not affiliated with or endorsed by hyprwm**.
+
+## License
+
+This project is licensed under the **BSD 3-Clause License**. The original copyright notice is kept in [`LICENSE`](LICENSE) as required.
+
+## Contributors
+
+- [bb8TheRobot](https://github.com/bb8TheRobot)
+- Claude (Anthropic) – AI pair programmer

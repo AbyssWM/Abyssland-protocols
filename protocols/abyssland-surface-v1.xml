@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<protocol name="hyprland_surface_v1">
+<protocol name="abyssland_surface_v1">
   <copyright>
     Copyright © 2025 outfoxxed
     All rights reserved.
@@ -30,44 +30,44 @@
     OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
   </copyright>
 
-  <description summary="hyprland-specific wl_surface extensions">
-    This protocol exposes hyprland-specific wl_surface properties.
+  <description summary="abyssland-specific wl_surface extensions">
+    This protocol exposes abyssland-specific wl_surface properties.
   </description>
 
-  <interface name="hyprland_surface_manager_v1" version="2">
-    <description summary="manager for hyprland surface objects">
-      This interface allows a client to create hyprland surface objects.
+  <interface name="abyssland_surface_manager_v1" version="2">
+    <description summary="manager for abyssland surface objects">
+      This interface allows a client to create abyssland surface objects.
     </description>
 
-    <request name="get_hyprland_surface">
-      <description summary="create a hyprland surface object">
-        Create a hyprland surface object for the given wayland surface.
+    <request name="get_abyssland_surface">
+      <description summary="create a abyssland surface object">
+        Create a abyssland surface object for the given wayland surface.
 
-        If the wl_surface already has an associated hyprland_surface_v1 object,
+        If the wl_surface already has an associated abyssland_surface_v1 object,
         even from a different manager, creation is a protocol error.
       </description>
 
-      <arg name="id" type="new_id" interface="hyprland_surface_v1"/>
+      <arg name="id" type="new_id" interface="abyssland_surface_v1"/>
       <arg name="surface" type="object" interface="wl_surface"/>
     </request>
 
     <request name="destroy" type="destructor">
-      <description summary="destroy the hyprland surface manager">
+      <description summary="destroy the abyssland surface manager">
         Destroy the surface manager.
         This does not destroy existing surface objects.
       </description>
     </request>
 
     <enum name="error">
-      <entry name="already_constructed" value="0" summary="wl_surface already has a hyprland surface object"/>
+      <entry name="already_constructed" value="0" summary="wl_surface already has a abyssland surface object"/>
     </enum>
   </interface>
 
-  <interface name="hyprland_surface_v1" version="2">
-    <description summary="hyprland-specific wl_surface properties">
-      This interface allows access to hyprland-specific properties of a wl_surface.
+  <interface name="abyssland_surface_v1" version="2">
+    <description summary="abyssland-specific wl_surface properties">
+      This interface allows access to abyssland-specific properties of a wl_surface.
 
-      Once the wl_surface has been destroyed, the hyprland surface object must be
+      Once the wl_surface has been destroyed, the abyssland surface object must be
       destroyed as well. All other operations are a protocol error.
     </description>
 
@@ -86,8 +86,8 @@
     </request>
 
     <request name="destroy" type="destructor">
-      <description summary="destroy the hyprland surface interface">
-        Destroy the hyprland surface object, resetting properties provided
+      <description summary="destroy the abyssland surface interface">
+        Destroy the abyssland surface object, resetting properties provided
         by this interface to their default values on the next wl_surface.commit.
       </description>
     </request>

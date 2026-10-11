@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<protocol name="hyprland_focus_grab_v1">
+<protocol name="abyssland_focus_grab_v1">
   <copyright>
     Copyright © 2024 outfoxxed
     All rights reserved.
@@ -36,7 +36,7 @@
     detailed below.
   </description>
 
-  <interface name="hyprland_focus_grab_manager_v1" version="1">
+  <interface name="abyssland_focus_grab_manager_v1" version="1">
     <description summary="manager for focus grab objects">
       This interface allows a client to create surface grab objects.
     </description>
@@ -46,7 +46,7 @@
         Create a surface grab object.
       </description>
 
-      <arg name="grab" type="new_id" interface="hyprland_focus_grab_v1"/>
+      <arg name="grab" type="new_id" interface="abyssland_focus_grab_v1"/>
     </request>
 
     <request name="destroy" type="destructor">
@@ -57,7 +57,7 @@
     </request>
   </interface>
 
-  <interface name="hyprland_focus_grab_v1" version="1">
+  <interface name="abyssland_focus_grab_v1" version="1">
     <description summary="input focus limiter">
       This interface restricts input focus to a specified whitelist of
       surfaces as long as the focus grab object exists and has at least

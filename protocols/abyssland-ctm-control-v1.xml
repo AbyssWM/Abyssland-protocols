@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<protocol name="hyprland_ctm_control_v1">
+<protocol name="abyssland_ctm_control_v1">
   <copyright>
     Copyright © 2024 Vaxry
     All rights reserved.
@@ -36,7 +36,7 @@
     This protocol is privileged and should not be exposed to unprivileged clients.
   </description>
 
-  <interface name="hyprland_ctm_control_manager_v1" version="2">
+  <interface name="abyssland_ctm_control_manager_v1" version="2">
     <description summary="manager to control CTMs">
       This object is a manager which offers requests to control CTMs.
 

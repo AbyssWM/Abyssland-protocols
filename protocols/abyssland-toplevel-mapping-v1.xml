@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<protocol name="hyprland_toplevel_mapping_v1">
+<protocol name="abyssland_toplevel_mapping_v1">
   <copyright>
     Copyright © 2025 WhySoBad
     All rights reserved.
@@ -31,10 +31,10 @@
   </copyright>
 
   <description summary="mapping of toplevels to windows">
-    This protocol allows clients to retrieve the mapping of toplevels to hyprland window addresses.
+    This protocol allows clients to retrieve the mapping of toplevels to abyssland window addresses.
   </description>
 
-  <interface name="hyprland_toplevel_mapping_manager_v1" version="1">
+  <interface name="abyssland_toplevel_mapping_manager_v1" version="1">
     <description summary="manager to request toplevel mappings">
       This object is a manager which offers requests to retrieve a window address
       for a toplevel.
@@ -47,7 +47,7 @@
       <arg
         name="handle"
         type="new_id"
-        interface="hyprland_toplevel_window_mapping_handle_v1"
+        interface="abyssland_toplevel_window_mapping_handle_v1"
       />
       <arg
         name="toplevel"
@@ -64,7 +64,7 @@
       <arg
         name="handle"
         type="new_id"
-        interface="hyprland_toplevel_window_mapping_handle_v1"
+        interface="abyssland_toplevel_window_mapping_handle_v1"
       />
       <arg
         name="toplevel"
@@ -82,7 +82,7 @@
     </request>
   </interface>
 
-  <interface name="hyprland_toplevel_window_mapping_handle_v1" version="1">
+  <interface name="abyssland_toplevel_window_mapping_handle_v1" version="1">
     <description summary="toplevel to window mapping">
       This object represents a mapping of a (wlr) toplevel to a window address.
 
