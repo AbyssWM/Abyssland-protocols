@@ -44,7 +44,7 @@ abyssland_protocols_srcdir = meson.current_source_dir()
 
 pkgconfig_configuration = configuration_data()
 pkgconfig_configuration.set('prefix', get_option('prefix'))
-pkgconfig_configuration.set('datarootdir', '${prefix}/@0@'.format(get_option('datadir')))
+pkgconfig_configuration.set('datarootdir', join_paths('${prefix}', get_option('datadir')))
 pkgconfig_configuration.set('abs_top_srcdir', abyssland_protocols_srcdir)
 pkgconfig_configuration.set('PACKAGE', 'abyssland-protocols')
 pkgconfig_configuration.set('ABYSSLAND_PROTOCOLS_VERSION', abyssland_protocols_version)
